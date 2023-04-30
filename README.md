@@ -85,4 +85,8 @@ poetry add python-dotenv
 - [Completion parameters examples](https://github.com/pcsmomo/openai-api-python-andrei/blob/main/02-dive-into-openai-api/14-completion-parameters.ipynb)
 - [Completion parameters Doc](https://platform.openai.com/docs/api-reference/completions/create)
 
+### 16. N and Echo
+
+echo option doesn't add up the completion_tokens which means no extra cost
+
 </details>
