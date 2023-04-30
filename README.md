@@ -26,4 +26,38 @@ GPT : Generative Pre-Trained Transformer
 - Nearly 500 billion tokens of training data
 - Open AI has not released information on the training of GPT-4
 
+### 5. OPTIONAL: The Transformer Architecture
+
+#### How?
+
+- GPT-4 is based on a type of neural network called a **transformer**
+  - Transformers are a deep learning model that excel at processing sequential data (like natural language text)
+
+#### Neural Networks
+
+- Convolutional Neural Networks
+  - work great for analyzing images
+- Recurrent Neural Networks
+  - work well at text processing and translation
+- Transformers
+
+##### Recurrent Neural Networks
+
+RNNs work sequentailly, processing text one word at a time, but they have some problems
+
+- They're not great at analyzing large pieces of text
+- They're slow to train. This means they can't be trained on huge amounts of data easily
+- Training can't be parallelized because they process sequentially
+
+#### Transformers
+
+- Transformers are relatively recent approach (2017)
+- Transformers process the entire input at once, rather than sequentially, meaning there is less risk of "forgetting" previous context
+- This means they can be trained in parallel
+
+Transformers introduced a couple key innovations
+
+- Positional Encoding
+- Self attention
+
 </details>
