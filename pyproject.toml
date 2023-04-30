@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "openai-api-python-master-colt"
+version = "0.1.0"
+description = ""
+authors = ["Noah Kim <dongwoo_333@hanmail.net>"]
+readme = "README.md"
+packages = [{include = "openai_api_python_master_colt"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+openai = "^0.27.5"
+jupyter = "^1.0.0"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

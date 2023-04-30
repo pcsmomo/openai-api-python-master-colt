@@ -60,4 +60,29 @@ Transformers introduced a couple key innovations
 - Positional Encoding
 - Self attention
 
+## Section 2: Getting Started
+
+### 10. Our First Completion Request
+
+```sh
+poetry init
+poetry add jupyter
+poetry add openai
+```
+
+### 12. Hiding Our API Key
+
+```sh
+poetry add python-dotenv
+```
+
+### 13. Understanding Tokens
+
+- [OpenAI API - Tokenizer](https://platform.openai.com/tokenizer)
+
+### 15. Stop Sequences
+
+- [Completion parameters examples](https://github.com/pcsmomo/openai-api-python-andrei/blob/main/02-dive-into-openai-api/14-completion-parameters.ipynb)
+- [Completion parameters Doc](https://platform.openai.com/docs/api-reference/completions/create)
+
 </details>
