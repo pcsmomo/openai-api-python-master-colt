@@ -174,4 +174,15 @@ The Indigenous population of Alaska is proportionally the highest of any U.S. st
 Summary:
 ```
 
+### 21. Data Extraction Prompts
+
+```
+Extract the food items from the restaurant review below
+
+Input:
+Was in the area and luckily spotted this gem, loved it. Good size seating area and some interesting options on the menu. We had the soup and the okonomiyaki. The portion size of the okonomiyaki was decent, doesn’t look that big in the picture but it was definitely enough for one. Would come here again.
+
+Output:
+```
+
 </details>
