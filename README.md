@@ -238,4 +238,42 @@ Nice cafe with a good range of options. I found the staff to be friendly and pol
 Sentiment:
 ```
 
+### 24. Let's Think Step By Step Prompting
+
+Keyword: "Let's think step by step"
+
+```
+Alice is 7 years older than Beth, who is 5 years older than Erica. What is the different between the ages of Alice and Erica, if Erica is 30 years old?
+
+Let's think step by step
+```
+
+### 25. Text Transformation Prompts
+
+#### Translate
+
+```
+Translate the following text to Spanish, French, and Japanese. The output should be a JSON object
+
+Text: My favorite color is purple.
+```
+
+#### Transform
+
+- Transform the following text to 3rd person
+- Transform the following text to 3rd person female
+- Transform the following text to 3rd person female in the future tense
+
+```
+Transform the following text to 3rd person
+
+Text: I love to ski so much. Today I went skiing with my best friends and I fell really hard and broke 34 bons. I cried for hours. Now I am almost dead.
+```
+
+```
+transform each movie title to emojis.
+
+The Lion King
+```
+
 </details>
