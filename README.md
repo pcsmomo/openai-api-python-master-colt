@@ -89,4 +89,39 @@ poetry add python-dotenv
 
 echo option doesn't add up the completion_tokens which means no extra cost
 
+## Section 3: Prompt Engineering
+
+### 18. The Elements of a Good Prompt
+
+Prompt Design
+
+- Main Instructions - a task you want the model to perform
+- Data - any input data (if necessary)
+- Output instructions - what type of output do you want? What format?
+
+#### Tips
+
+##### Provide clear instructions
+
+```
+Complete the sentence: Humans are
+
+Humans are
+```
+
+##### Use a separator to designate instructions and input
+
+```
+"""Instruction"""
+Translate the text below to French:
+
+Text: "I am a huge idiot"
+```
+
+##### Reduce "fluffy" language. Be precise
+
+```
+In 3-4 sentences, explain the role of the Supreme Court in US politics. The explanation should be geared towards middle-schoolers
+```
+
 </details>
