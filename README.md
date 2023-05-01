@@ -124,4 +124,33 @@ Text: "I am a huge idiot"
 In 3-4 sentences, explain the role of the Supreme Court in US politics. The explanation should be geared towards middle-schoolers
 ```
 
+### 19. Controlling The Output Format
+
+##### Be specific about your designer output
+
+```
+Extract the place names in the following
+
+Desired format:
+Places: <comma_separated_list_of_places>
+
+Input: "Airbnb, Inc.is an American San Francisco-based company. The company is credited with revolutionizing the tourism industry however it has also been the subject of intense criticism by residents of tourism hotspot cities like Barcelona, Venice, etc. for enabling an unaffordable increase in home rents, and for a lack of regulation."
+```
+
+```
+Extract the place names in the following
+
+Desired format: JSON array of palce names
+
+Input: " Airbnb, Inc.is an American San Francisco-based company. The company is credited with revolutionizing the tourism industry however it has also been the subject of intense criticism by residents of tourism hotspot cities like Barcelona, Venice, etc. for enabling an unaffordable increase in home rents, and for a lack of regulation."
+
+Answer:
+```
+
+```
+Generate a list of the top 5 most populated countries on earth with their population
+
+Desired format: JSON object with country name as the key and population as the value
+```
+
 </details>
