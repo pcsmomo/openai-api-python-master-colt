@@ -209,4 +209,33 @@ Nice cafe with a good range of options. I found the staff to be friendly and pol
 Output:
 ```
 
+### 23. Zero-Shot Vs. Few-Shot Prompting
+
+#### Zero-shot - no example
+
+```
+Extract keywords from the below text.
+
+Text: {text}
+
+Keywords:
+```
+
+#### Few-shot - provide a few examples
+
+```
+# This is actually one shot
+Classify the following text's sentiment
+
+Desired format in a number: -1 for negative, 0 for neutral, and 1 for positive
+
+Input: "I love you so much!"
+Sentiment: 1
+
+Input:
+Nice cafe with a good range of options. I found the staff to be friendly and polite. The cafe itself is clean, spacious and really nice in gwneral. The chai was very very nice with a great addition of honey on the side which not many places offer. The brioche bun was really tasty but the bacon was super dry and thin. I think this bun could be taken to the next level with a good, not overly cooked, piece of bacon. Thanks for the quick service today.
+
+Sentiment:
+```
+
 </details>
