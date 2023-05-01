@@ -179,8 +179,32 @@ Summary:
 ```
 Extract the food items from the restaurant review below
 
+Desired format: JSON array of food names
+
 Input:
 Was in the area and luckily spotted this gem, loved it. Good size seating area and some interesting options on the menu. We had the soup and the okonomiyaki. The portion size of the okonomiyaki was decent, doesn’t look that big in the picture but it was definitely enough for one. Would come here again.
+```
+
+### 22. Sentiment Analysis Prompts
+
+```
+Classify the following text's sentiment in one word among positive, neutral, or negative
+
+Input:
+
+Food was average at best. Breakfast burrito had an abundance of ingredients with total lack of flavour. Japanese pancake was okay but not great.  Coffee was bitter and uninspiring. Overall, wouldn't return. 1 star.
+
+Output:
+```
+
+```
+Classify the following text's sentiment
+
+Desired format in a number: -1 for negative, 0 for neutral, and 1 for positive
+
+Input:
+
+Nice cafe with a good range of options. I found the staff to be friendly and polite. The cafe itself is clean, spacious and really nice in gwneral. The chai was very very nice with a great addition of honey on the side which not many places offer. The brioche bun was really tasty but the bacon was super dry and thin. I think this bun could be taken to the next level with a good, not overly cooked, piece of bacon. Thanks for the quick service today.
 
 Output:
 ```
