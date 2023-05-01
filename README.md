@@ -153,4 +153,25 @@ Generate a list of the top 5 most populated countries on earth with their popula
 Desired format: JSON object with country name as the key and population as the value
 ```
 
+### 20. Summarization Prompts
+
+```
+Summarize the following text
+
+Desired format: 2-3 sentences of text
+
+Input:
+Alaska (/əˈlæskə/ (listen) ə-LAS-kə) is a U.S. state on the northwest extremity of North America. A semi-exclave of the U.S., it borders British Columbia and Yukon in Canada to the east, and it shares a western maritime border in the Bering Strait with the Russian Federation's Chukotka Autonomous Okrug. To the north are the Chukchi and Beaufort Seas of the Arctic Ocean, and the Pacific Ocean lies to the south and southwest.
+
+Alaska is the largest U.S. state by area, comprising more total area than the next three largest states of Texas, California, and Montana combined, and is the seventh-largest subnational division in the world. It is the third-least populous and most sparsely populated U.S. state, but with a population of 736,081 as of 2020, is the continent's most populous territory located mostly north of the 60th parallel, with more than quadruple the combined populations of Northern Canada and Greenland.[3] The state capital of Juneau is the second-largest city in the United States by area, and the former capital of Alaska, Sitka, is the largest U.S. city by area. Approximately half of Alaska's residents live within the Anchorage metropolitan area.
+
+Indigenous people have lived in Alaska for thousands of years, and it is widely believed that the region served as the entry point for the initial settlement of North America by way of the Bering land bridge. The Russian Empire was the first to actively colonize the area beginning in the 18th century, eventually establishing Russian America, which spanned most of the current state, and promoted and maintained a native Alaskan Creole population.[4] The expense and logistical difficulty of maintaining this distant possession prompted its sale to the U.S. in 1867 for US$7.2 million (equivalent to $140 million in 2021). The area went through several administrative changes before becoming organized as a territory on May 11, 1912. It was admitted as the 49th state of the U.S. on January 3, 1959.[5]
+
+Abundant natural resources have enabled Alaska—with one of the smallest state economies—to have one of the highest per capita incomes, with commercial fishing, and the extraction of natural gas and oil, dominating Alaska's economy. U.S. Armed Forces bases and tourism also contribute to the economy; more than half the state is federally-owned land containing national forests, national parks, and wildlife refuges.
+
+The Indigenous population of Alaska is proportionally the highest of any U.S. state, at over 15 percent.[6] Various Indigenous languages are spoken, and Alaskan Natives are influential in local and state politics.
+
+Summary:
+```
+
 </details>
