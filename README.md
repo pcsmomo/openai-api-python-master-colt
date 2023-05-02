@@ -276,4 +276,22 @@ transform each movie title to emojis.
 The Lion King
 ```
 
+## Section 4: Color Palette Generator Project
+
+### 30. Setting Up The Flask Server
+
+```sh
+mkdir ColorPaletteFlaskApp
+cd ColorPaletteFlaskApp
+poetry init
+poetry add flask
+touch app.py
+```
+
+```sh
+poetry shell
+# flask run
+flask run --debug  # automatic restart server when code changes (but not reloading)
+```
+
 </details>
