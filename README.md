@@ -294,4 +294,11 @@ poetry shell
 flask run --debug  # automatic restart server when code changes (but not reloading)
 ```
 
+### 31. Integrating OpenAI With Server
+
+```sh
+poetry add openai
+poetry add python-dotenv
+```
+
 </details>
