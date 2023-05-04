@@ -10,6 +10,8 @@ openai.api_key = config["OPENAI_API_KEY"]
 app = Flask(
     __name__,
     template_folder='templates',
+    static_url_path='',
+    static_folder='static'
 )
 
 
