@@ -7,6 +7,33 @@
     <title>Color Palette Generator</title>
   </head>
   <body>
-    <h1>Hello!!!</h1>
+    <div class="container"></div>
+
+    <form id="form">
+      <input type="text" name="query" />
+      <button class="btn">Submit</button>
+    </form>
+
+    <script>
+      const form = document.getElementById("form");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const query = form.elements.query.value;
+        fetch("/palette", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams({
+            query,
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+          });
+      });
+    </script>
   </body>
 </html>
