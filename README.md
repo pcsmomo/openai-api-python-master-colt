@@ -4,6 +4,10 @@ Mastering OpenAI Python APIs: Unleash the Power of GPT4 by Colt Steele
 
 ## File Structure
 
+- 04-color-palette-generator
+  - `poetry shell`
+  - `flask run --debug`
+
 # Details
 
 <details open>
@@ -299,6 +303,14 @@ flask run --debug  # automatic restart server when code changes (but not reloadi
 ```sh
 poetry add openai
 poetry add python-dotenv
+```
+
+## Section 5: Important API Parameters
+
+### 39. Temperature
+
+```sh
+poetry add textwrap
 ```
 
 </details>
