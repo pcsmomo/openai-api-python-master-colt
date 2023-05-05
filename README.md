@@ -313,4 +313,12 @@ poetry add python-dotenv
 poetry add textwrap
 ```
 
+## Section 6: The Chat API & GPT-4
+
+### 49. Rewriting a Completion Prompt In Chat Format
+
+> Chat API can make the same result as Completion API \
+> and it is 10 times cheaper. `gpt-3.5-turbo` < `text-davinci-003` \
+> https://openai.com/pricing
+
 </details>
