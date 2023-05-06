@@ -6,6 +6,24 @@ config = dotenv_values(".env")
 openai.api_key = config["OPENAI_API_KEY"]
 
 
+def bold(text):
+    bold_start = "\033[1m"
+    bold_end = "\033[0m"
+    return bold_start + text + bold_end
+
+
+def blue(text):
+    blue_start = "\033[34m"
+    blue_end = "\033[0m"
+    return blue_start + text + blue_end
+
+
+def red(text):
+    red_start = "\033[31m"
+    red_end = "\033[0m"
+    return red_start + text + red_end
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Simple command line chatbot with GPT")
@@ -28,7 +46,7 @@ def main():
 
     while True:
         try:
-            user_input = input("You: ")
+            user_input = input(bold(blue("You: ")))
             messages.append({"role": "user", "content": user_input})
 
             res = openai.ChatCompletion.create(
@@ -39,8 +57,8 @@ def main():
             res_message = res["choices"][0]["message"]
             messages.append(res_message.to_dict())
             # print(messages)
-            print("Assistant: ", res_message["content"])
-            print("\n")
+            print(bold(red("Assistant: ")), res_message["content"])
+            # print("")
 
         except KeyboardInterrupt:
             print("Exiting...")
