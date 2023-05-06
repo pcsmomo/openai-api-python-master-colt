@@ -16,9 +16,11 @@ while True:
             messages=messages
         )
 
-        messages.append(res["choices"][0]["message"].to_dict())
+        res_message = res["choices"][0]["message"]
+        messages.append(res_message.to_dict())
         # print(messages)
-        print("Assistant: ", res["choices"][0]["message"]["content"])
+        print("Assistant: ", res_message["content"])
+        print("\n\n")
 
     except KeyboardInterrupt:
         print("Exiting...")
