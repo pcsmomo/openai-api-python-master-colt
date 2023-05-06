@@ -7,6 +7,10 @@ Mastering OpenAI Python APIs: Unleash the Power of GPT4 by Colt Steele
 - 04-color-palette-generator
   - `poetry shell`
   - `flask run --debug`
+- 07-chatbot
+  - `poetry install`
+  - `poetry shell`
+  - `python chatbot.py`
 
 # Details
 
