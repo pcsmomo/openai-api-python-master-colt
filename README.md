@@ -325,4 +325,14 @@ poetry add textwrap
 > and it is 10 times cheaper. `gpt-3.5-turbo` < `text-davinci-003` \
 > https://openai.com/pricing
 
+## Section 9: Cost Estimation With TikToken
+
+### 61. Counting Tokens With TikToken
+
+[TikToken - Github](https://github.com/openai/tiktoken)
+
+```sh
+poetry add tiktoken
+```
+
 </details>
