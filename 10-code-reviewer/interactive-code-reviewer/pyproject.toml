@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "interactive-code-reviewer"
+version = "0.1.0"
+description = ""
+authors = ["Noah Kim <dongwoo_333@hanmail.net>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+openai = "^0.27.6"
+python-dotenv = "^1.0.0"
+autopep8 = "^2.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
