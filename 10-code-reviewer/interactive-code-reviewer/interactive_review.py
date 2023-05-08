@@ -289,8 +289,8 @@ def main():
     parser = argparse.ArgumentParser(
         description="Automated code review using OpenAI API")
     parser.add_argument("filename", help="The target file to review")
-    parser.add_argument("--model", default="gpt-4",
-                        help="The chat model to use for code review (default: gpt-4)")
+    parser.add_argument("--model", default="gpt-3.5-turbo",
+                        help="The chat model to use for code review (default: gpt-3.5-turbo)")
     args = parser.parse_args()
 
     try:

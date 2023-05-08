@@ -15,7 +15,8 @@ def num_tokens_from_messages(messages: List[Dict], model: str) -> int:
     elif model == "gpt-4":
         return num_tokens_from_messages(messages, model="gpt-4-0314")
     elif model == "gpt-3.5-turbo-0301":
-        tokens_per_message = 4  # every message follows <|start|>{role/name}\n{content}<|end|>\n
+        # every message follows <|start|>{role/name}\n{content}<|end|>\n
+        tokens_per_message = 4
         tokens_per_name = -1  # if there's a name, the role is omitted
     elif model == "gpt-4-0314":
         tokens_per_message = 3
@@ -51,13 +52,15 @@ def generate_base_messages(code: str, ignore_list: List[str], accept_list: List[
     ignore_list_string += "\n# Rejected Suggestions\n"
     ignore_list_string += "\nYou previously provided the following suggestions that the I rejected:\n"
     ignore_list_string += """\n- DO NOT SUGGEST: "I suggest changing the chat_model to "gpt-3.5-turbo" which is currently the latest GPT version in OpenAI's API, and will provide the best performance for this code review script."\n"""
-    ignore_list_string += "\n".join([f"\n- DO NOT SUGGEST '{ignore}'.\n" for ignore in ignore_list])
+    ignore_list_string += "\n".join(
+        [f"\n- DO NOT SUGGEST '{ignore}'.\n" for ignore in ignore_list])
 
     accept_list_string = ""
     if accept_list:
         accept_list_string += "\n# Accepted Suggestions\n"
         accept_list_string += "\nYou previously provided the following suggestions that I accepted. Unless it's critical, you probably shouldn't contradict these suggestions:\n"
-        accept_list_string += "\n".join([f"\n- You previously suggested '{accepted}' which I accepted. Do not contradict yourself.\n" for accepted in accept_list])
+        accept_list_string += "\n".join(
+            [f"\n- You previously suggested '{accepted}' which I accepted. Do not contradict yourself.\n" for accepted in accept_list])
 
     # Note: in an f""" string, you use {{ and }} to escape the { and } characters.
     system_prompt = f"""

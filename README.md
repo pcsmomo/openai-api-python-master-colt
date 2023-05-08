@@ -349,4 +349,11 @@ python reviewer.py ./sample-codes/tree.py
 python reviewer.py ./sample-codes/gradient.py --model "gpt-3.5-turbo"
 ```
 
+### 67. Interactive Code Reviewer Prompt
+
+```sh
+poetry add tiktoken
+poetry add tenacity
+```
+
 </details>
