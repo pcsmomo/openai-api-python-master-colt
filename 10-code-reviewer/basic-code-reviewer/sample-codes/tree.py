@@ -20,7 +20,7 @@ class Node:
                 return
 
     def search(self, val):
-        if val==self.data:
+        if val == self.data:
             return str(val)+" is found in the BST"
         elif val < self.data:
             if self.leftChild:
@@ -31,15 +31,15 @@ class Node:
             if self.rightChild:
                 return self.rightChild.search(val)
             else:
-                return str(val)+" is not found in the BST" 
-       
-            
+                return str(val)+" is not found in the BST"
+
     def PrintTree(self):
         if self.leftChild:
             self.leftChild.PrintTree()
-        print( self.data),
+        print(self.data),
         if self.rightChild:
             self.rightChild.PrintTree()
+
 
 root = Node(27)
 root.insert(14)

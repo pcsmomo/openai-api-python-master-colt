@@ -1,10 +1,7 @@
 import openai
 from dotenv import load_dotenv
 import os
-
-load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
-
+import argparse
 
 PROMPT = """
 You will receive a file's contents as text.
@@ -16,14 +13,40 @@ def mystery(x, y):
     return x ** y
 """
 
-messages = [
-    {"role": "system", "content": PROMPT},
-    {"role": "user", "content": f"Code review the following file: {filecontent}"}
-]
 
-res = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo",
-    messages=messages
-)
+def code_review(file_path, model):
+    with open(file_path, "r") as file:
+        content = file.read()
+    generated_code_review = make_code_review_request(content, model)
+    print(generated_code_review)
 
-print(res["choices"][0]["message"])
+
+def make_code_review_request(filecontent, model):
+    messages = [
+        {"role": "system", "content": PROMPT},
+        {"role": "user", "content": f"Code review the following file: {filecontent}"}
+    ]
+
+    res = openai.ChatCompletion.create(
+        model=model,
+        messages=messages
+    )
+
+    return res["choices"][0]["message"]["content"]
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Simple code reviewer for a file")
+    parser.add_argument("file")
+    parser.add_argument("--model", default="gpt-3.5-turbo")
+    args = parser.parse_args()
+    # code_review("./sample-codes/tree.py", "gpt-3.5-turbo")
+    code_review(args.file, args.model)
+    # python reviewer.py ./sample-codes/gradient.py --model "gpt-3.5-turbo"
+
+
+if __name__ == "__main__":
+    load_dotenv()
+    openai.api_key = os.getenv("OPENAI_API_KEY")
+    main()

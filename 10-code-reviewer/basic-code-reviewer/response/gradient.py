@@ -1,8 +1,9 @@
 import argparse
-import colorsys
 import sys
-from typing import List
 from collections import namedtuple
+from typing import List
+
+import colorsys
 
 ColorRGB = namedtuple("ColorRGB", ["r", "g", "b"])
 ColorHSV = namedtuple("ColorHSV", ["h", "s", "v"])
@@ -58,18 +59,18 @@ def gradient_between_colors(color1: ColorRGB, color2: ColorRGB, steps: int) -> L
     Returns:
         A list of ColorRGB objects representing the gradient between the two colors.
     """
+    color_gradient = []
     hsv1 = rgb_to_hsv(color1)
     hsv2 = rgb_to_hsv(color2)
 
-    gradient = []
     for step in range(steps + 1):
         t = step / steps
         h = lerp(hsv1.h, hsv2.h, t)
         s = lerp(hsv1.s, hsv2.s, t)
         v = lerp(hsv1.v, hsv2.v, t)
-        gradient.append(hsv_to_rgb(ColorHSV(h, s, v)))
+        color_gradient.append(hsv_to_rgb(ColorHSV(h, s, v)))
 
-    return gradient
+    return color_gradient
 
 
 def parse_args() -> argparse.Namespace:
@@ -109,9 +110,9 @@ def main() -> int:
         """
         try:
             return ColorRGB(*map(int, color_string.split(",")))
-        except ValueError:
+        except ValueError as e:
             raise ValueError(
-                f"Invalid color string: {color_string}. Expected format: 'R,G,B'")
+                f"Invalid color string: {color_string}. Expected format: 'R,G,B'") from e
 
     try:
         color1 = parse_color_string(args.color1)
@@ -120,8 +121,13 @@ def main() -> int:
         print(e)
         return 1
 
-    gradient = gradient_between_colors(color1, color2, args.n)
-    for color in gradient:
+    try:
+        color_gradient = gradient_between_colors(color1, color2, args.n)
+    except Exception as e:
+        print(e)
+        return 1
+
+    for color in color_gradient:
         print(color)
 
     return 0

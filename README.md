@@ -11,6 +11,10 @@ Mastering OpenAI Python APIs: Unleash the Power of GPT4 by Colt Steele
   - `poetry install`
   - `poetry shell`
   - `python chatbot.py` or `python chatbot.py --personality "rude and sarcastic"`
+- 10-code-reviewer
+  - basic-code-reviewer
+    - `python reviewer.py ./sample-codes/tree.py`
+    - `python reviewer.py ./sample-codes/gradient.py --model "gpt-3.5-turbo"`
 
 # Details
 
@@ -333,6 +337,16 @@ poetry add textwrap
 
 ```sh
 poetry add tiktoken
+```
+
+## Section 10: GPT-4 Automatic Code Reviewer
+
+### 65. Building The Basic Code Reviewer Pt 2
+
+```sh
+# it takes some time to get the response
+python reviewer.py ./sample-codes/tree.py
+python reviewer.py ./sample-codes/gradient.py --model "gpt-3.5-turbo"
 ```
 
 </details>
