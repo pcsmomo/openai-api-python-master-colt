@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Noah Kim <dongwoo_333@hanmail.net>"]
 readme = "README.md"
-packages = [{include = "openai_api_python_master_colt"}]
+
 
 [tool.poetry.dependencies]
 python = "^3.11"
